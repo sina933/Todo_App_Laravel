@@ -10,7 +10,7 @@ class TaskController extends Controller
 {
     public function index(){
 
-        $tasks=Task::auth()->user()->tasks;
+        $tasks=auth()->user()->tasks;
         return view('tasks.index',compact('tasks'));
     }
 
@@ -18,7 +18,8 @@ class TaskController extends Controller
 
         $request->validate(['title'=>'required|string|max:255']);
         auth()->user()->tasks()->create(['title'=>$request->title]);
+        return redirect()->route('tasks.index');
     }
 
-    return redirect()->route('tasks.index');
+    
 }
