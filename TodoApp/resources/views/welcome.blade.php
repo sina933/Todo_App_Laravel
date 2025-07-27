@@ -173,7 +173,7 @@
                     <span class="mr-2 text-xl font-bold text-white">تودو اپ</span>
                 </div>
                 <div class="mt-8 md:mt-0">
-                    <p class="text-center text-base text-gray-400">&copy; ۱۴۰۲ تودو اپ. تمامی حقوق محفوظ است.</p>
+                    <p class="text-center text-base text-gray-400">&copy; 1404 تودو اپ. تمامی حقوق محفوظ است.</p>
                 </div>
             </div>
         </div>
