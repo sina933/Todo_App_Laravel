@@ -23,23 +23,29 @@ class TaskController extends Controller
 
     public function update(Request $request,Task $task){
 
-        if($task->user_id!=auth()->id){
+        if($task->user_id!=auth()->user()->id){
             abort(403);
         }
 
         $request->validate([
-            'title' => 'required|string|max:255',
             'is_complete' => 'nullable|boolean',
         ]);
 
-        $task->update([
+        $task->is_complete = $request->input('is_complete', false);
+        $task->save();
+        return redirect()->route('dashboard')->with('success', 'تسک با موفقیت به‌روزرسانی شد.');
 
-            'title'=> $request->title,
-            'is_complete'=>$request->boolean('is_complete'),
+        
+    }
+    public function destroy(Task $task){
+        
+        $task->delete();
+        
+        return redirect()->route('dashboard')->with('success', 'کار با موفقیت حذف شد.');
+        
 
-        ]);
 
-        return redirect()->route('doshboard')->with('success', 'تسک با موفقیت به‌روزرسانی شد.');
+    }
 
 
 
@@ -49,4 +55,4 @@ class TaskController extends Controller
 
 
     
-}
+
