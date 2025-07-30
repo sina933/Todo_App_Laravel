@@ -4,6 +4,8 @@
             <x-authentication-card-logo />
         </x-slot>
 
+        
+
         <x-validation-errors class="mb-4" />
 
         @session('status')
@@ -44,5 +46,10 @@
                 </x-button>
             </div>
         </form>
+        <div class="mb-4">
+            <a href="{{ url('/') }}" class="inline-block px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-md shadow-sm transition">
+               Back
+            </a>
+        </div>
     </x-authentication-card>
 </x-guest-layout>
