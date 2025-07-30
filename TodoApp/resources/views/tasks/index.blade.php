@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+<x-app-layout>
     <meta charset="UTF-8">
     <title>لیست کارها</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -67,6 +68,10 @@
         @endforelse
     </ul>
 </div>
+
+        
+</x-app-layout>
+
 
 </body>
 </html>
