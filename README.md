@@ -1,5 +1,6 @@
  ToDo App - Laravel
  A simple and clean ToDo web application built with Laravel, designed to help users manage their tasks efficiently. This project is ideal for learning the Laravel framework and demonstrating fundamental concepts such as routing, MVC structure, authentication, validation, and database relationships.
+
 Features:
 - User registration and login (authentication)
 - Create, edit, and delete tasks
@@ -7,6 +8,7 @@ Features:
 - Responsive and clean UI
 - Validation and error handling
 - CSRF protection and secure routing
+
 Tech:
 - Backend:PHP,Laravel
 - Frontend:Blade templating engine, Tailwind CSS
